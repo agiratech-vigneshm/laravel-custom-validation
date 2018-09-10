@@ -16,8 +16,10 @@ use Illuminate\Http\Request;
 
 Route::post('user', function(Request $request) {
     $request->validate([
-        'age' =>
-            'required|seniorCitizen'
+        'age' =>[
+            'required',
+            new \App\Rules\seniorCitizen(),
+            ]
     ]);
    return response('Success', 200);
 });
