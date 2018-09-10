@@ -103,6 +103,9 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'age' => [
+            'senior_citizen' => 'The :attribute must be 60 or above',
+        ]
     ],
 
     /*

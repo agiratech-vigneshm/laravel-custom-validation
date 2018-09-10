@@ -16,14 +16,8 @@ use Illuminate\Http\Request;
 
 Route::post('user', function(Request $request) {
     $request->validate([
-        'age' => [
-            'required',
-            function($attribute, $value, $fail) {
-                if($value < 60) {
-                    $fail($attribute.' must be 60 or above');
-                }
-            }
-        ],
+        'age' =>
+            'required|seniorCitizen'
     ]);
    return response('Success', 200);
 });
